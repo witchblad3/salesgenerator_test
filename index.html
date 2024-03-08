@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<button id="openModal">Открыть форму</button>
+
+<div id="myModal" class="modal">
+    <div class="form-container">
+        <img class="closeModal" id="closeModal" src="assets/icon/close.png" alt="">
+        <div class="photo">
+            <img src="/assets/picture/xpopup-download-material.png.pagespeed.ic.qchzNNZTco.png" alt="Your Photo">
+        </div>
+        <div class="form-content">
+            <h2>Получите набор файлов для руководителя:</h2>
+            <form id="myForm" onsubmit="return validateForm()" method="post" action="mail.php">
+                <input type="email" id="email" name="email" placeholder="Email" value="order@salesgenerator.pro" required><br>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (000) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required><br>
+                <button type="submit" id="send-form">Скачать файлы</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
